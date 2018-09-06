@@ -204,5 +204,23 @@ client.on('message', function(client) {
     }
     });
 
+// Sug
+
+client.on('message', message => {
+  let args = message.content.split(" ").slice(1).join(' ');
+  if (!message.channel.guild) return message.channel.send("هذا الأمر للسيرفرات فقط .");
+  if (message.content.startsWith(prefix + "sug")) {
+    let sug = new Discord.RichEmbed()
+    .setThumbnail(message.author.avatarURL)
+    .setAuthor(message.author.tag, message.guild.name)
+    .setTitle("** إقتراح **")
+    .addField("المرسل - message.author.tag")
+    .addField(`الاقتراح - ${args}`)
+    client.channels.get("487231191037247488").send(sug);
+  }
+});
+
+
+
 
 client.login(process.env.BOT_TOKEN);
