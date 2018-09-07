@@ -246,7 +246,7 @@ ${member}
 // Autorole
 
 client.on('guildMemberAdd', member => {
-  member.addRole(member.guild.roles.find('name', 'Epic.));
+  member.addRole(member.guild.roles.find('name', 'Epic.'));
 });
 
 client.login(process.env.BOT_TOKEN);
