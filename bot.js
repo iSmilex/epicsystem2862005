@@ -236,7 +236,7 @@ client.on('guildMemberAdd', member => {
   .setDescription(`**
 منور سيرفر ايبك يا عسل :two_hearts:
 ${member}
-أتمنى تشوف روم : <#484070872697667584> , <@486892282264682506>
+أتمنى تشوف روم : <#484070872697667584> , <#486892282264682506> **
   `)
   .setFooter(member.guild.name)
   channel.sendEmbed(embed);
