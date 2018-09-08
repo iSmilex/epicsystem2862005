@@ -10,7 +10,7 @@ client.on('ready', () => {
 });
 
 client.on('ready', () => {
-    client.user.setGame(`Epic System.`, 'https://www.twitch.tv/idk')
+    client.user.setGame(`Tops.`, 'https://www.twitch.tv/idk')
 });
 
 const developers = ["326131905743421440"]
@@ -168,7 +168,7 @@ client.on('message', function(client) {
       
     let rebel;
     client.on("ready", async  => {
-        let guild = client.guilds.get("480895922281381898");
+        let guild = client.guilds.get("455373038028980244");
       let users = guild.members.map(member => member.user.id);
       let i;
       rebel=0;
@@ -180,21 +180,21 @@ client.on('message', function(client) {
       rebel++;
     }
     }
-    guild.channels.find('id', '480928190408294425').setName(" Epic「"+rebel+"」");
+    guild.channels.find('id', '488133174359228426').setName(" Tops「"+rebel+"」");
       client.setInterval(() =>{
         let d = Date.now()
       }, 5000);
     });
     client.on('voiceStateUpdate', (oldMember, newMember) => {
-        let guild = client.guilds.get("480895922281381898");
+        let guild = client.guilds.get("455373038028980244");
     let newUserChannel = newMember.voiceChannel
     let oldUserChannel = oldMember.voiceChannel
      if(oldUserChannel === undefined && newUserChannel !== undefined) {
        rebel++;
-    guild.channels.find('id', '480928190408294425').setName(" Epic「"+rebel+"」");
+    guild.channels.find('id', '488133174359228426').setName(" Tops「"+rebel+"」");
     } else if(newUserChannel === undefined){
       rebel--;
-    guild.channels.find('id', '480928190408294425').setName(" Epic「"+rebel+"」");
+    guild.channels.find('id', '488133174359228426').setName(" Tops「"+rebel+"」");
     }
     });
     client.on('message', Codes => {
@@ -217,7 +217,7 @@ client.on('message', message => {
     .setTitle("** إقتراح **")
     .addField("المرسل - message.author.tag")
     .addField(`الاقتراح - ${args}`)
-    client.channels.get("487231191037247488").send(sug);
+    client.channels.get("488133424197140490").send(sug);
   }
 });
 
@@ -227,7 +227,7 @@ client.on('message', message => {
 // Welcome!
 
 client.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.find('name', 'epic');
+  let channel = member.guild.channels.find('name', 'tops');
   let memberavatar = member.user.avatarURL
   if (!channel) return;
   let embed = new Discord.RichEmbed()
@@ -235,8 +235,7 @@ client.on('guildMemberAdd', member => {
   .setColor('RANDOM')
   .setDescription(`**
 منور سيرفر ايبك يا عسل :two_hearts:
-${member}
-أتمنى تشوف روم : <#484070872697667584> , <#486892282264682506> **
+${member} **
   `)
   .setFooter(member.guild.name)
   channel.sendEmbed(embed);
@@ -246,7 +245,7 @@ ${member}
 // Autorole
 
 client.on('guildMemberAdd', member => {
-  member.addRole(member.guild.roles.find('name', 'Epic.'));
+  member.addRole(member.guild.roles.find('name', 'T.C'));
 });
 
 client.login(process.env.BOT_TOKEN);
